@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>myAdmin</title>
+    <link rel="stylesheet" href="styles/material.min.css">
+    <script src="library/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+    .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type {
+        padding-right: 0;
+    }
+    
+    .demo-card-square.mdl-card {
+        width: 297px;
+        height: 320px;
+    }
+    
+    .demo-card-square > .mdl-card__title {
+        color: #fff;
+        
+    }
+    </style>
+</head>
+
+<body>
+    <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--waterfall">
+            <!-- Top row, always visible -->
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">myAdmin</span>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom row, not visible on scroll -->
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Title</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="#starks-panel">Home</a>
+                <a class="mdl-navigation__link" href="#lannisters-panel">News</a>
+                <a class="mdl-navigation__link" href="#targaryens-panel">Todo</a>
+                <a class="mdl-navigation__link" href="">Notes</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                    <div class="mdl-tabs__tab-bar mdl-layout__header-row">
+                        <a href="#home-panel" class="mdl-tabs__tab  is-active">Home</a>
+                        <a href="#news-panel" class="mdl-tabs__tab ">News</a>
+                        <a href="#todo-panel" class="mdl-tabs__tab ">Todo</a>
+                    </div>
+                    <div class="mdl-tabs__panel is-active" id="home-panel">
+
+                    </div>
+                    <div class="mdl-tabs__panel" id="news-panel">
+                    	<div class="mdl-grid" id='newsContent'>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="mdl-tabs__panel" id="todo-panel">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="library/jquery.min.js"></script>
+    <script src="app/main.js"></script>
+</body>
+
+</html>
