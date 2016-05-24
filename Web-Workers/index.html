@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Workers</title>
+</head>
+
+<body>
+    <a href="catchme.html">Test Link</a>
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').then(function(reg) {
+            console.log('Yey!', reg);
+        }).catch(function(err) {
+            console.log('Boo!', err);
+        });
+    }
+
+    </script>
+</body>
+
+</html>
